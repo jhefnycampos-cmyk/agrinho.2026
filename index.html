@@ -1,1 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardians of the World</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <div class="acessibilidade-barra">
+        <button onclick="alterarFonte(1)" title="Aumentar Letra">A+ Fonte</button>
+        <button onclick="alterarFonte(-1)" title="Diminuir Letra">A- Fonte</button>
+    </div>
+
+    <header class="header">
+        <div class="logo">Guardians of the <span>World</span></div>
+        <nav class="nav">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">O Tema</a>
+            <a href="#problema">O Problema</a>
+            <a href="#solucoes">Soluções</a>
+            <a href="#ferramentas">Medidor & Filtro</a>
+            <a href="#noticias">Notícias</a>
+        </nav>
+    </header>
+
+    <main id="conteudo-principal">
+        <section id="inicio" class="hero-section">
+            <div class="hero-content">
+                <h1>Proteger as nossas nascentes é garantir o amanhã.</h1>
+                <p>Se a poluição continuar e ninguém se importar, como iremos beber água? Salvar os rios é salvar a nós mesmos.</p>
+                <a href="#ferramentas" class="btn btn-turquesa">Testar Pureza da Água</a>
+            </div>
+        </section>
+
+        <div class="container">
+            <section id="sobre" class="section">
+                <h2 class="titulo-secao">Por que proteger as águas?</h2>
+                <p>As nascentes e os rios são os pontos de origem de onde retiramos toda a água essencial para o consumo humano, para os animais e para a irrigação no campo. Manter o equilíbrio entre a produção e o meio ambiente é o único caminho para um futuro sustentável.</p>
+            </section>
+
+            <hr>
+
+            <section id="problema" class="section grid-duas-colunas">
+                <div class="card-problema">
+                    <h3>O Alerta: Rios Poluídos</h3>
+                    <p>O descarte incorreto de lixos, efluentes sem tratamento e a falta de cuidado com as matas ciliares destroem as fontes de vida. Sem ação rápida, o planeta morrerá aos poucos, colapsando ecossistemas inteiros.</p>
+                </div>
+                <div class="bloco-ilustrativo">
+                    <blockquote>
+                        "Se o rio morre, o ser humano e os animais morrem junto. A conscientização deve alcançar a população geral."
+                    </blockquote>
+                </div>
+            </section>
+
+            <hr>
+
+            <section id="solucoes" class="section">
+                <h2 class="titulo-secao">Como Preservar as Nascentes</h2>
+                <div class="grid-cards">
+                    <div class="card">
+                        <div class="card-icone">🌳</div>
+                        <h3>Cercamento e Reflorestamento</h3>
+                        <p>Proteger o entorno da nascente com cercas para evitar o pisoteio de animais e plantar árvores nativas para segurar o solo e filtrar a água da chuva.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icone">🗑️</div>
+                        <h3>Descarte Correto</h3>
+                        <p>Destinar corretamente resíduos de embalagens e evitar que produtos químicos ou lixo doméstico sejam carregados para dentro das bacias hidrográficas.</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <section id="ferramentas" class="section">
+                <h2 class="titulo-secao">Laboratório Digital da Água</h2>
+                
+                <div class="bloco-interativo">
+                    <h3>💧 Medidor de Pureza da Água</h3>
+                    <p>Selecione o estado ou a coloração visual da água para identificar o nível de pureza e o tratamento recomendado:</p>
+                    
+                    <div class="controle-pureza">
+                        <select id="seletor-agua" onchange="atualizarMedidor()">
+                            <option value="cristalina">Água Cristalina / Transparente</option>
+                            <option value="turva">Água Turva / Amarelada</option>
+                            <option value="poluida">Água Escura / Com Resíduos</option>
+                        </select>
+                    </div>
+
+                    <div id="grafico-pureza" class="status-box azul-limpo">
+                        </div>
+                </div>
+
+                <div class="bloco-interativo" style="margin-top: 2rem;">
+                    <h3>🧪 Simulador de Filtração de Poluição</h3>
+                    <p>Veja o passo a passo mecânico e ecológico para recuperar e reter impurezas da água:</p>
+                    
+                    <div id="tela-simulador" class="painel-simulador">
+                        </div>
+                    <button id="btn-passo" class="btn btn-bebe" onclick="avancarFiltro()">Avançar Etapa</button>
+                </div>
+            </section>
+
+            <hr>
+
+            <section id="noticias" class="section">
+                <h2 class="titulo-secao">Notícias e Incidentes Ambientais</h2>
+                <p style="text-align: center; margin-bottom: 1.5rem;">Clique abaixo para pesquisar e ler relatórios sobre incidentes de poluição fluvial:</p>
+                <div class="botoes-noticias">
+                    <button class="btn btn-turquesa" onclick="buscarNoticia('https://news.google.com/search?q=poluicao+de+rios+e+nascentes')">Ver Notícias Sobre Poluição</button>
+                    <button class="btn btn-bebe" onclick="buscarNoticia('https://www.ibge.gov.br/')">Pesquisar Dados do Meio Ambiente</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Políticas de Privacidade | Termos de Uso | Contato</p>
+        <p class="creditos">Desenvolvido por Jhefny Ohanna - Guardians of the world - Agrinho 2026.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
